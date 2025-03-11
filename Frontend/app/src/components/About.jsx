@@ -1,10 +1,10 @@
 import React from "react";
-import image1 from "./Images/Dining.jpg";
-import image2 from "./Images/Living Room 1.jpg";
-import image7 from "./Images/Living Room 2.jpg";
-import image3 from "./Images/image1.jpg";
-import image4 from "./Images/image2.jpg";
-import image5 from "./Images/image3.jpg";
+import image1 from "../assets/Images/Dining.jpg"
+import image2 from "../assets/Images/Living Room 1.jpg"
+import image3 from "../assets/Images/image1.jpg"
+import image4 from "../assets/Images/image2.jpg"
+import image5 from "../assets/Images/image3.jpg"
+import image7 from "../assets/Images/Living Room 2.jpg"
 
 const About = () => {
   return (

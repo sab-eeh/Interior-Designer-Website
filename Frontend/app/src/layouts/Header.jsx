@@ -74,21 +74,29 @@ const DropdownMenu = () => {
         </nav>
 
         {/* Social Icons (Hidden in Mobile View) */}
-        <div className="hidden sm:flex items-center gap-4">
+        <div className=" hidden sm:flex items-center gap-4  ">
           <FaFacebook size={20} className="cursor-pointer" />
           <FaInstagram size={23} className="cursor-pointer" />
           <IoMdMail size={24} className="cursor-pointer" />
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="sm:hidden" onClick={toggleMobileMenu}>
-          <FiAlignJustify size={28} />
-        </button>
+        <div className="max-[640px]:flex max-[640px]:items-center max-[640px]:gap-3 hidden">
+        <div className="max-[640px]:flex max-[640px]:items-center gap-3 lg:hidden ">
+            <FaFacebook size={20} className="cursor-pointer hover:text-gray-400 " />
+            <FaInstagram size={23} className="cursor-pointer hover:text-gray-400" />
+            <IoMdMail size={24} className="cursor-pointer hover:text-gray-400" />
+          </div> 
+          <button className="sm:hidden" onClick={toggleMobileMenu}>
+            <FiAlignJustify size={28} className="cursor-pointer hover:text-gray-400" />
+          </button>
+          
+        </div>
       </header>
 
       {/* Mobile Menu */}
       {mobileMenu && (
-        <div className="absolute bg-white w-full left-0 top-16   shadow-lg z-20 sm:hidden">
+        <div className="absolute bg-white w-full left-0 top-16  shadow-lg z-20 sm:hidden">
           <nav className="flex flex-col space-y-1 font-semibold text-black">
             <a className="block  hover:bg-gray-300 px-3 py-2 " href="#">
               HOME

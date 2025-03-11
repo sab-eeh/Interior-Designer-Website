@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import image5 from "./Images/image5.jpg";
+import image5 from "../assets/Images/image5.jpg"
 
 const WorkExperience = () => {
   const experiences = [

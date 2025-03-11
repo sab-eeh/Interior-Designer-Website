@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Header from "./layouts/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import WorkExperience from "./components/WorkExperience";
@@ -7,11 +7,11 @@ import HeadlineSection from "./components/HeadlineSection";
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <Home />
       <About />
-      <HeadlineSection/>
-      <WorkExperience/>
+      <HeadlineSection />
+      <WorkExperience />
     </>
   );
 }

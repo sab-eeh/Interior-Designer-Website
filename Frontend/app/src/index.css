@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
 }
 .headline-sec {
-  background-image: url(./components/Images/image6.jpg);
+  background-image: url(./assets/Images/image6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center ;

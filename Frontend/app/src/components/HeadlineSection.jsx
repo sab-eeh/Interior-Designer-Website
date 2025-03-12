@@ -1,5 +1,4 @@
 import React from "react";
-import image from "./Images/image6.jpg";
 
 const HeadlineSection = () => {
   return (

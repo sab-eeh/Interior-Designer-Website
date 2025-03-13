@@ -2,6 +2,8 @@ import React from "react";
 import video from "../assets/Videos/Video3.mp4";
 import image5 from "../assets/Images/Kitchen.jpg";
 import Carousel from "../components/Carousel";
+import Header from '../layouts/Header'
+import Footer from "../layouts/Footer";
 import {
   FaPencilRuler,
   FaDraftingCompass,
@@ -16,7 +18,7 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "Working with this team was an absolute pleasure. They transformed my vision into a reality with creativity and precision.",
+      "Working with this team was an absolute pleasure. They transformed my vision into a reality with creativity.",
     name: "Sarah M.",
     title: "Homeowner",
   },
@@ -64,8 +66,9 @@ const services = [
 const HomePage = () => {
   return (
     <>
+      <Header/>
       {/* Hero Section */}
-      <div className="bg-black w-full h-[100vh] ">
+      <section className="bg-black w-full h-[100vh] ">
         {/* <div className="bg-black opacity-10 absolute z-9 w-full h-screen"></div> */}
         <video
           autoPlay
@@ -74,10 +77,10 @@ const HomePage = () => {
           className="absolute object-cover  h-[100vh] w-full "
           src={video}
         ></video>
-      </div>
+      </section>
 
       {/* About Section */}
-      <div className="bg-[#121212] w-full justify-center items-center  overflow-hidden flex h-[100vh] gap-6 px-14 ">
+      <section className="bg-[#121212] w-full justify-center items-center  overflow-hidden flex h-[100vh] gap-6 px-14 ">
         <div className="text-white flex-col space-y-3 w-[40vw] ">
           <h1 className="font-bold text-2xl text-amber-200">ABOUT US </h1>
           <div className="flex-col space-y-2 ">
@@ -96,10 +99,10 @@ const HomePage = () => {
         <div className="">
           <Carousel />
         </div>
-      </div>
+      </section>
 
       {/* Headline Section */}
-      <div className="headline-sec z-1 w-full h-[80vh] flex items-center justify-center ">
+      <section className="headline-sec z-1 w-full h-[80vh] flex items-center justify-center ">
         <div className=" text-white text-center px-40 space-y-3 z-20 ">
           <h1 className="text-5xl font-bold text-amber-200 ">
             Innovative Spaces Crafted for You
@@ -116,15 +119,15 @@ const HomePage = () => {
             start your journey with us.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Another Section */}
-      <div className="bg-[#121212] w-full h-[100vh] flex justify-center items-center gap-6 px-14 py-16 overflow-hidden ">
+      <section className="bg-[#121212] w-full h-[100vh] flex justify-center items-center gap-6 px-14 py-16 overflow-hidden ">
         <div className="border-1 border-[#ffffff28] p-2 rounded-2xl -ml-20">
           <img
             src={image5}
             alt="Living Room"
-            className="w-[100%] h-auto rounded-2xl "
+            className=" h-auto rounded-2xl "
           />
         </div>
         <div className="text-white flex-col space-y-3">
@@ -145,10 +148,10 @@ const HomePage = () => {
             test of time.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Services Section */}
-      <div className="w-full bg-[#121212] px-14 py-16 flex-col space-y-8 justify-center items-center ">
+      <section className="w-full bg-[#121212] px-14 py-16 flex-col space-y-8 justify-center items-center ">
         <div className="text-white text-center space-y-4">
           <div>
             <h1 className="font-bold text-2xl text-amber-200">OUR SERVICES</h1>
@@ -178,12 +181,12 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Our Mission */}
 
-      <div className="our-mission-sec z-1 w-full h-[80vh] flex items-center justify-center ">
-        <div className=" text-white text-center px-40 space-y-3 z-20 ">
+      <section className="our-mission-sec  w-full h-[80vh] flex items-center justify-center ">
+        <div className=" text-white text-center px-40 space-y-3">
           <h1 className="text-5xl font-bold text-amber-200 ">Our Mission</h1>
           <p className="text-xl font-normal">
             Our mission is to redefine spaces with innovation, elegance, and
@@ -195,7 +198,7 @@ const HomePage = () => {
             sustainability.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Testimonials */}
       <section className="py-16 bg-[#121212]">
@@ -207,7 +210,7 @@ const HomePage = () => {
             transition={{ duration: 0.6 }}
             className="lg:w-1/2 w-full text-center lg:text-left mt-12 lg:mt-0 lg:pl-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold text-amber-200">
               What Our Clients Say
             </h2>
             <p className="text-lg mt-4">
@@ -227,7 +230,7 @@ const HomePage = () => {
               className="w-full"
             >
               {testimonials.map((testimonial, index) => (
-                <SwiperSlide key={index} className="p-6">
+                <SwiperSlide key={index} className="p-6 mb-3">
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -252,6 +255,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </>
   );
 };

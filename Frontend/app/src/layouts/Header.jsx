@@ -3,6 +3,7 @@ import { RiArrowDownSFill } from "react-icons/ri";
 import { FaInstagram, FaFacebook } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FiAlignJustify } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const DropdownMenu = () => {
   // State for dropdown menu
@@ -27,8 +28,8 @@ const DropdownMenu = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden sm:flex items-center font-semibold lg:text-lg md:text-sm sm:text-sm lg:gap-7 md:gap-5 sm:gap-3">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
+          <Link to="">HOME</Link>
+          <Link to="about">ABOUT</Link>
 
           {/* Dropdown Menu */}
           <div className="relative">
@@ -45,32 +46,32 @@ const DropdownMenu = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <a
-                  href="#"
+                <Link
+                  to="architecture"
                   className="block py-2 px-4 text-sm hover:bg-gray-300"
                 >
                   ARCHITECTURE
-                </a>
+                </Link>
                 <hr className="text-gray-300" />
-                <a
-                  href="#"
+                <Link
+                  to="interior"
                   className="block py-2 px-4 text-sm hover:bg-gray-300"
                 >
                   INTERIOR DESIGN
-                </a>
+                </Link>
                 <hr className="text-gray-300" />
-                <a
-                  href="#"
+                <Link
+                  to="management"
                   className="block py-2 px-4 text-sm hover:bg-gray-300"
                 >
                   PROJECT MANAGEMENT
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a href="#">PORTFOLIO</a>
-          <a href="#">CONTACT</a>
+          <Link to="portfolio">PORTFOLIO</Link>
+          <Link to="contact">CONTACT</Link>
         </nav>
 
         {/* Social Icons (Hidden in Mobile View) */}
@@ -82,15 +83,26 @@ const DropdownMenu = () => {
 
         {/* Mobile Menu Button */}
         <div className="max-[640px]:flex max-[640px]:items-center max-[640px]:gap-3 hidden">
-        <div className="max-[640px]:flex max-[640px]:items-center gap-3 lg:hidden ">
-            <FaFacebook size={20} className="cursor-pointer hover:text-gray-400 " />
-            <FaInstagram size={23} className="cursor-pointer hover:text-gray-400" />
-            <IoMdMail size={24} className="cursor-pointer hover:text-gray-400" />
-          </div> 
+          <div className="max-[640px]:flex max-[640px]:items-center gap-3 lg:hidden ">
+            <FaFacebook
+              size={20}
+              className="cursor-pointer hover:text-gray-400 "
+            />
+            <FaInstagram
+              size={23}
+              className="cursor-pointer hover:text-gray-400"
+            />
+            <IoMdMail
+              size={24}
+              className="cursor-pointer hover:text-gray-400"
+            />
+          </div>
           <button className="sm:hidden" onClick={toggleMobileMenu}>
-            <FiAlignJustify size={28} className="cursor-pointer hover:text-gray-400" />
+            <FiAlignJustify
+              size={28}
+              className="cursor-pointer hover:text-gray-400"
+            />
           </button>
-          
         </div>
       </header>
 
@@ -98,13 +110,13 @@ const DropdownMenu = () => {
       {mobileMenu && (
         <div className="absolute bg-white w-full left-0 top-16  shadow-lg z-20 sm:hidden">
           <nav className="flex flex-col space-y-1 font-semibold text-black">
-            <a className="block  hover:bg-gray-300 px-3 py-2 " href="#">
+            <Link className="block  hover:bg-gray-300 px-3 py-2 " to="#">
               HOME
-            </a>
+            </Link>
             <hr className="text-gray-400" />
-            <a className="block px-3 py-2 hover:bg-gray-300" href="#">
+            <Link className="block px-3 py-2 hover:bg-gray-300" to="#">
               ABOUT
-            </a>
+            </Link>
             <hr className="text-gray-400" />
 
             {/* Mobile Dropdown */}
@@ -119,37 +131,37 @@ const DropdownMenu = () => {
               <hr className="text-gray-400" />
               {showDropdown && (
                 <div className="mt-2 flex flex-col bg-white text-black shadow-lg font-semibold rounded-md">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block py-2 px-4 text-sm hover:bg-gray-300"
                   >
                     ARCHITECTURE
-                  </a>
+                  </Link>
                   <hr className="text-gray-300" />
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block py-2 px-4 text-sm hover:bg-gray-300"
                   >
                     INTERIOR DESIGN
-                  </a>
+                  </Link>
                   <hr className="text-gray-300" />
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block py-2 px-4 text-sm hover:bg-gray-300"
                   >
                     PROJECT MANAGEMENT
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
 
-            <a className="block px-3 py-2 hover:bg-gray-300" href="#">
+            <Link className="block px-3 py-2 hover:bg-gray-300" to="#">
               PORTFOLIO
-            </a>
+            </Link>
             <hr className="text-gray-400" />
-            <a className="block px-3 py-2 hover:bg-gray-300" href="#">
+            <Link className="block px-3 py-2 hover:bg-gray-300" to="#">
               CONTACT
-            </a>
+            </Link>
           </nav>
         </div>
       )}

@@ -2,8 +2,6 @@ import React from "react";
 import video from "../assets/Videos/Video3.mp4";
 import image5 from "../assets/Images/Kitchen.jpg";
 import Carousel from "../components/Carousel";
-import Header from '../layouts/Header'
-import Footer from "../layouts/Footer";
 import {
   FaPencilRuler,
   FaDraftingCompass,
@@ -66,7 +64,6 @@ const services = [
 const HomePage = () => {
   return (
     <>
-      <Header/>
       {/* Hero Section */}
       <section className="bg-black w-full h-[100vh] ">
         {/* <div className="bg-black opacity-10 absolute z-9 w-full h-screen"></div> */}
@@ -80,14 +77,19 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section className="bg-[#121212] w-full justify-center items-center  overflow-hidden flex h-[100vh] gap-6 px-14 ">
-        <div className="text-white flex-col space-y-3 w-[40vw] ">
+      <section 
+      className="bg-[#121212] w-full justify-center items-center overflow-hidden lg:flex lg:h-[100vh] lg:gap-6 lg:text-left px-14 sm:p-10 sm:text-center sm:space-y-5 max-[640px]:fex-col max-[640px]:space-y-5 max-[640px]:p-6 max-[640px]:text-center ">
+        <div className="text-white flex-col lg:space-y-3 lg:w-[40vw] sm:space-y-2 max-[640px]:space-y-2 ">
           <h1 className="font-bold text-2xl text-amber-200">ABOUT US </h1>
-          <div className="flex-col space-y-2 ">
-            <h1 className="text-5xl font-bold ">Designing Spaces,</h1>
-            <h1 className="text-5xl font-bold">Elevating Lifestyles</h1>
+          <div className="flex-col lg:space-y-2 ">
+            <h1 className="lg:text-5xl md:text-4xl sm:text-3xl max-[640px]:text-2xl font-bold ">
+              Designing Spaces,
+            </h1>
+            <h1 className="lg:text-5xl md:text-4xl sm:text-3xl max-[640px]:text-2xl font-bold">
+              Elevating Lifestyles
+            </h1>
           </div>
-          <p className="text-xl font-normal">
+          <p className="lg:text-xl md:text-xl font-normal">
             At Your Interior Design Firm , we transform spaces into stylish,
             functional environments that reflect your personality and lifestyle.
             Our expert team blends creativity with practicality, ensuring every
@@ -102,19 +104,22 @@ const HomePage = () => {
       </section>
 
       {/* Headline Section */}
-      <section className="headline-sec z-1 w-full h-[80vh] flex items-center justify-center ">
-        <div className=" text-white text-center px-40 space-y-3 z-20 ">
-          <h1 className="text-5xl font-bold text-amber-200 ">
+      <section
+        className=" overflow-hidden headline-sec z-1 w-full flex lg:h-[80vh] md:h-[70vh] items-center justify-center sm:p-10
+       max-[640px]:p-6"
+      >
+        <div className=" text-white text-center lg:px-40 space-y-3 z-20 ">
+          <h1 className="lg:text-5xl md:text-4xl sm:text-3xl max-[640px]:text-2xl   font-bold text-amber-200 ">
             Innovative Spaces Crafted for You
           </h1>
-          <p className="text-xl font-normal">
+          <p className="lg:text-xl sm:text-lg font-normal">
             We design interiors that blend beauty with functionality, creating
             spaces that inspire and enhance everyday living. From contemporary
             homes to sophisticated corporate spaces, we tailor every detail to
             reflect your unique style and needs. Explore how we can bring your
             vision to life.
           </p>
-          <p className="text-xl font-normal">
+          <p className="lg:text-xl  sm:text-lg  font-normal">
             View our design portfolio or reach out at [your email/contact] to
             start your journey with us.
           </p>
@@ -122,23 +127,30 @@ const HomePage = () => {
       </section>
 
       {/* Another Section */}
-      <section className="bg-[#121212] w-full h-[100vh] flex justify-center items-center gap-6 px-14 py-16 overflow-hidden ">
-        <div className="border-1 border-[#ffffff28] p-2 rounded-2xl -ml-20">
+      <section
+        className="bg-[#121212] w-full lg:h-[100vh] lg:flex lg:justify-center items-center gap-6 lg:px-14 lg:py-16 overflow-hidden sm:p-10 sm:space-y-7 max-[640px]:p-6
+       "
+      >
+        <div className="border-1 border-[#ffffff28] p-2 rounded-2xl lg:-ml-20 sm:mx-auto ">
           <img
             src={image5}
             alt="Living Room"
-            className=" h-auto rounded-2xl "
+            className="lg:h-auto lg:w-[100%] sm:w-[100vw] rounded-2xl "
           />
         </div>
-        <div className="text-white flex-col space-y-3">
-          <h1 className="font-bold text-2xl text-amber-200">
+        <div className="text-white flex-col lg:space-y-3 lg:text-left sm:space-y-1 sm:text-center ">
+          <h1 className="font-bold text-2xl sm:text-center text-amber-200">
             BLEINDING AESTHETICS WITH FUNCTIONALITY
           </h1>
-          <div className="flex-col space-y-2 ">
-            <h1 className="text-5xl font-bold ">Timeless Elegance,</h1>
-            <h1 className="text-5xl font-bold">Thoughtful Design</h1>
+          <div className="flex-col lg:space-y-2 sm:text-center ">
+            <h1 className="lg:text-5xl md:text-4xl sm:text-3xl max-[640px]:2xl sm:inline-block font-bold ">
+              Timeless Elegance,
+            </h1>
+            <h1 className="lg:text-5xl md:text-4xl sm:text-3xl max-[640px]:2xl sm:inline-block font-bold">
+              Thoughtful Design
+            </h1>
           </div>
-          <p className="text-xl font-normal">
+          <p className="text-xl font-normal sm:text-lg">
             Our team of visionary architects and interior designers brings
             creativity and precision to every project. We craft spaces that
             seamlessly merge aesthetics with functionality, ensuring a perfect
@@ -255,8 +267,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <Footer/>
     </>
   );
 };
